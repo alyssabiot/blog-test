@@ -1,0 +1,8 @@
+<h1>Liste des posts</h1>
+<ol>
+  <% @posts.each do |post| %>
+    <li><%= post.title %> | <%= link_to "Voir", post_path(post) %> | <%= link_to "Modifier", edit_post_path(post) %>| <%= link_to "Supprimer", post_path(post), method: :delete, data: {confirm: "Etes-vous sûr?"} %></li>
+  <% end  %>
+</ol>
+
+<%= link_to "Créer un post", new_post_path %>
