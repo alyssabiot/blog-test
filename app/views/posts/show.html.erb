@@ -1,5 +1,6 @@
 <h1><%= @post.title %></h1>
 <p><%= @post.body %></p>
 <% if @post.image.attached? %>
-  <%= image_tag @post.image.variant(resize: "200x200") %>
+  <%#= image_tag @post.image.variant(resize: "200x200") %>
+  <%= image_tag @post.image %>
 <% end %>
