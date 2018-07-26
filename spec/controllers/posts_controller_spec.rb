@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-Rspec.describe HomeController do
+RSpec.describe PostsController do
   let(:user) { instance_double(User) }
 
   before { log_in(user) } # log_in needs to be defined in rails_helper
