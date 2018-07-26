@@ -64,6 +64,10 @@ RSpec.configure do |config|
         example.run
     end
   end
+  
+  config.include Warden::Test::Helpers
+  config.include Devise::TestHelpers, :type => :controller
+  config.include ControllerHelpers, :type => :controller
 end
 
 Shoulda::Matchers.configure do |config|
